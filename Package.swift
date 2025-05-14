@@ -11,6 +11,12 @@ let package = Package(
             name: "FoodNStuff",
             targets: ["FoodNStuff"]),
     ],
+    
+    dependencies: [
+        // 本地包的依赖
+        .package(name: "NvStreamingSdkCore", path: "../Pods-NvStreamingSdkCore"),
+    ],
+    
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
