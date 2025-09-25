@@ -4,31 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "FoodNStuff",
+    name: "MyLibrary",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "FoodNStuff",
-            targets: ["FoodNStuff"]),
+            name: "MyLibrary",
+            targets: ["MyLibrary"]),
     ],
-    
-    dependencies: [
-        // 本地包的依赖
-        .package(name: "NvStreamingSdkCore", path: "../Pods-NvStreamingSdkCore"),
-        .package(name: "MyLibrary", path: "./Modules/MyLibrary")
-    ],
-    
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        
         .target(
-            name: "FoodNStuff",
-            dependencies: ["MyLibrary"]
-        ),
-        .testTarget(
-            name: "FoodNStuffTests",
-            dependencies: ["FoodNStuff"]
-        ),
+            name: "MyLibrary"),
+
     ]
 )
