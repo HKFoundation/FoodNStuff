@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         // 本地包的依赖
         .package(name: "NvStreamingSdkCore", path: "../Pods-NvStreamingSdkCore"),
-        .package(name: "MyLibrary", path: "./Modules/MyLibrary")
+        .package(url: "https://github.com/HKFoundation/MyLibrary.git", exact: "1.0.0")
     ],
     
     targets: [
